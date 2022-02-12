@@ -1,0 +1,33 @@
+body{
+    
+}
+.input{
+    width: 300px;
+    padding:30px;
+    border: none;
+    border-radius: 0;
+    box-shadow: 0 10px 20px rgba(63, 63, 180, 0.274);
+    font-size: large;
+    
+}
+ .select{
+  padding: 30px;
+  width: 150px;
+  color:white;
+  background-color:#6976d95b;
+  box-shadow: 0 10px 20px rgba(63, 63, 180, 0.274);
+  cursor: pointer;
+  margin-right: 10px;
+  border: none;
+ font-size: large;
+}
+.select:hover{
+    background-color: #6976d95b;
+    color: whitesmoke;
+    outline: none;
+}
+.select option{
+    background: rgba(255, 255, 255, 0.39);
+    color: rgba(12, 12, 12, 0.623);
+
+}

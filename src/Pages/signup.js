@@ -1,10 +1,10 @@
 import React from 'react';
-import '../styles/Signup.css'
+import signStyles from '../styles/Signup.module.css'
 import {Link} from 'react-router-dom'
 
 
 const Signup = () => {
-  return <div className='signup-wrapper'>
+  return <div className={signStyles.wrapper}>
             <form >
             <h2>Create an account</h2>
             
@@ -13,8 +13,8 @@ const Signup = () => {
             <input autocomplete="off" name="name" type='email' placeholder='Enter email address' />
            
             <input autocomplete="off" name="password" type='password' placeholder='Enter password' />
-            <button className='btn-signup' type='submit'>Create Account</button>
-            <div className='login-link'>
+            <button className={signStyles.btnSignup} type='submit'>Create Account</button>
+            <div className={signStyles.loginLink}>
             <span>Already have an account? </span>
             <Link to='/' >
                 Log in

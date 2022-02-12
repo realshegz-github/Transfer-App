@@ -1,0 +1,29 @@
+.moreMenu{
+    width: 12rem;
+    position: absolute;
+    list-style: none;
+    text-align: start;
+  
+}
+.moreMenuClicked{
+    display: none;
+}
+.moreMenu li{
+    background-color: #6976d9;
+    font-size: 16px;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+}
+.moreList a{
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 20px 15px;
+    display: block;
+    text-align: start;
+  
+}
+.moreList a:hover{
+    background-color: #48529cab;
+    color: whitesmoke;
+}

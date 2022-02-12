@@ -1,9 +1,12 @@
-import React from 'react';
-import '../styles/Navbar.css'
+import useState from 'react';
+import '../../styles/Navbar.css'
 import {Link} from 'react-router-dom'
-
+import DropDown from '../dropDown' 
 
 const Navbar = () => {
+
+  // const[dropdown, setDropdown] = useState(false)
+
   return (
       <>
         <nav >
@@ -20,9 +23,13 @@ const Navbar = () => {
                   <Link className='link' to='/transfer'>
                     Send Money
                   </Link>
-                  <Link className='link' to='#' >
+                  <Link className='link' to='/'
+                  // onMouseEnter={() => setDropdown(true)}
+                  // onMouseLeave={() => setDropdown(false)}
+                  >
                     More
                   </Link>
+                  {/* {dropdown && <DropDown/>} */}
               </div>
 
               <div className='btn-link'>
@@ -34,6 +41,7 @@ const Navbar = () => {
                   </Link>
               </div>
          </nav>
+         
       </>
         );
 };
