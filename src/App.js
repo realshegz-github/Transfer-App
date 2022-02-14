@@ -9,8 +9,7 @@ import {
 import Home from './Pages';
 import Signup from './Pages/signup';
 import Transaction from './Pages/transaction';
-import Transfer from './Pages/transfer';
-
+import Transfer from './Pages/homepage';
 
 function App() {
   return (
@@ -20,7 +19,7 @@ function App() {
       <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/transaction" element={<Transaction />}/>
-          <Route exact path="/transfer" element={<Transfer/>}/>
+          <Route exact path="/homepage" element={<Transfer/>}/>
           <Route exact path="/signup" element={<Signup />} />
       </Routes>
     

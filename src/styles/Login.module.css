@@ -49,6 +49,7 @@ form {
       cursor: pointer;  
   }
    .forgetPwd{
+     text-decoration: none;
       color: rgb(221, 8, 8);
       width: 300px;
       text-align: right;
@@ -90,19 +91,12 @@ form {
     font-size: 16px;
   }
   form .signupLink a:hover{
-    font-size: 18px;
-    color: rgb(29, 78, 223);
+    
+    color: rgb(18, 59, 182);
     cursor: pointer;
   }
   form .signupLink{
       text-align: center;
       width: 300px;
   }
-  /* .signup-link{
-      color: royalblue;
-      font-size: 16px;
-  }
-  .signup-link:hover{
-    color: rgb(29, 78, 223);
-    cursor: pointer;
-} */
+ 

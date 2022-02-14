@@ -15,6 +15,10 @@ body{
     url("/src/image/globe.jpg");
     color: white;  
 }
+.equal{
+    text-align: center;
+    font-size: 18px;
+}
 
 .context{
     max-width: 500px;
@@ -31,7 +35,7 @@ body{
 }
 .button{
     width: 460px;
-    padding:25px;
+    padding:20px;
     border: none;
     border-radius: 0;
     font-size: large;

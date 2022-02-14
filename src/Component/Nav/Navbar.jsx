@@ -20,7 +20,7 @@ const Navbar = () => {
                   <Link className='link' to='/transaction' >
                     Dash board
                   </Link>
-                  <Link className='link' to='/transfer'>
+                  <Link className='link' to='/homepage'>
                     Send Money
                   </Link>
                   <Link className='link' to='/'
@@ -39,6 +39,7 @@ const Navbar = () => {
                   <Link to='/' >
                   <button className='btn-login' type='submit'>Log in</button>
                   </Link>
+                  
               </div>
          </nav>
          

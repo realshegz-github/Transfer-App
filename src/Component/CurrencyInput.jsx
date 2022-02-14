@@ -16,7 +16,7 @@ const CurrencyInput = ({
               <option key={item} value={item}>{item}</option>
           ))}   
       </select>
-      <input type="number" id="currency-field" value={amount} className={currencyStyles.input}/>
+      <input type="number" id="currency-field" value={amount} className={currencyStyles.input} onChange={onChangeAmount}/>
      
   </div>
   )

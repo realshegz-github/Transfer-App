@@ -35,6 +35,7 @@ cursor: pointer;
 .link:hover {
     color: rgba(245, 245, 245, 0.603);
     cursor: pointer; 
+    
 }
 .btn-link{
     display: flex;

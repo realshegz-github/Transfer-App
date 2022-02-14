@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "Abiodun segun",
+        "detail": "quick transfer",
+        "amount": 1000,
+        "date": "12-08-2021"
+        
+    },
+    {
+        "id": 2,
+        "name": "Abiodun segun",
+        "detail": "quick transfer",
+        "amount": 1000,
+        "date": "12-08-2021"
+    },
+    {
+        "id": 3,
+        "name": "Abiodun segun",
+        "detail": "quick transfer",
+        "amount": 1000,
+        "date": "12-08-2021"
+    },
+    {
+        "id": 4,
+        "name": "Abiodun segun",
+        "detail": "quick transfer",
+        "amount": 1000,
+        "date": "12-08-2021"
+    },
+    {
+        "id": 5,
+        "name": "Abiodun segun",
+        "detail": "quick transfer",
+        "amount": 1000,
+        "date": "12-08-2021"
+    }
+]

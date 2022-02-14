@@ -8,11 +8,11 @@ const Signup = () => {
             <form >
             <h2>Create an account</h2>
             
-            <input autocomplete="off" name="name" type='text' placeholder='Full Name' />
+            <input autocomplete="text" required name="name" type='text' placeholder='Full Name' />
             
-            <input autocomplete="off" name="name" type='email' placeholder='Enter email address' />
+            <input autocomplete="email" required name="name" type='email' placeholder='Enter email address' />
            
-            <input autocomplete="off" name="password" type='password' placeholder='Enter password' />
+            <input autocomplete="password" required name="password" type='password' placeholder='Enter password' />
             <button className={signStyles.btnSignup} type='submit'>Create Account</button>
             <div className={signStyles.loginLink}>
             <span>Already have an account? </span>
