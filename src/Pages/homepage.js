@@ -1,7 +1,7 @@
 import React, { useEffect, useState} from 'react';
 import tranStyles from '../styles/Transfer.module.css'
 import CurrencyInput from '../Component/CurrencyInput';
-// import {useAuth0} from '@auth0/auth0-react'
+
 const baseUrl = 'http://api.exchangeratesapi.io/v1/latest?access_key=335d2dc9bdbf47859b66c65e8794f0f8';
  
 
@@ -52,16 +52,14 @@ const Transfer = () => {
      .then(data => setExchangeRate(data.rates[toCurrency]))
    }
   }, [fromCurrency, toCurrency])
-
-  // const {isAuthenticated} = useAuth0()   
+  
 
   return(
-    // isAuthenticated && (
-
+      
      <div className={tranStyles.container}>
        <div className={tranStyles.context}>
           <h1>Discover the Latest currency App to make <span style={{color:'#6976d9'}}>transfer</span> accross the continent </h1>
-          <p>We help to convert and make <span style={{color:'#6976d9'}}><b>transfer</b></span> accross countries</p>
+          <p> We help to convert and make <span style={{color:'#6976d9'}}><b>transfer</b></span> accross countries</p>
        </div>
        <div className={tranStyles.currency}>
             <CurrencyInput 

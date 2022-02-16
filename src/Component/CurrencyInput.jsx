@@ -9,12 +9,17 @@ const CurrencyInput = ({
 
     amount
 }) => {  
+  const filters = ['EUR', 'NGN', 'USD']
+  const uniqueCurrencies = [...new Set(currencyOption)]
   return(
   <div className={currencyStyles.currencySelect}>
        <select className={currencyStyles.select} value={selectedCurrency} onChange={onChangeCurrency}>
-          {currencyOption.map(item => (
-              <option key={item} value={item}>{item}</option>
-          ))}   
+          {uniqueCurrencies?.map(item => {
+            if(filters.includes(item)) {
+              return (
+                <option key={item} value={item}>{item}</option>
+            )}
+          })}  
       </select>
       <input type="number" id="currency-field" value={amount} className={currencyStyles.input} onChange={onChangeAmount}/>
      

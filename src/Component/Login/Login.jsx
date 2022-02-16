@@ -1,12 +1,39 @@
-import React from 'react';
+import {useState} from 'react';
 import loginStyles from '../../styles/Login.module.css'
 import {Link} from 'react-router-dom'
 import Authentication from '../../image/Authentication.svg'
-// import { useAuth0 } from '@auth0/auth0-react';
+import PropTypes from 'prop-types';
+import useToken from '../useToken';
+import { useNavigate } from "react-router-dom";
 
-const Login = () => {
-    // const {loginWithRedirect, isAuthenticated} = useAuth0()
-  
+async function loginUser(credentials){
+    return fetch('http://localhost:8080/login',{
+        method: 'POST',
+        headers:{
+            'Content-Type':'application/json'
+        },
+        body: JSON.stringify(credentials)
+    })
+    .then(data => data.json())
+}
+
+export default function Login() {
+    let navigate = useNavigate();
+
+    const [username, setUserName]= useState()
+    const [password, setPassword]= useState()
+   
+  const handleSubmit =async e =>{
+      e.preventDefault();
+      const token =await loginUser({
+          username,
+          password
+      });
+      localStorage.setItem('token', JSON.stringify(token))
+      navigate(`/homepage`);
+  }
+
+
   return (
    
    <div className={loginStyles.container}>
@@ -14,12 +41,12 @@ const Login = () => {
           <img src={Authentication} alt='authentication' width='600px'/>
         </div>
 
-        <form>
+        <form onSubmit={handleSubmit}>
             <h2>Login to stay connected with <span><b>Transfer App</b></span> all around the continent</h2>
             <label>Email</label>
-            <input autocomplete="email" required  name="name" type='email' placeholder='Enter email address' />
+            <input autocomplete="email" required  name="name" type='email' onChange={e => setUserName(e.target.value)} placeholder='Enter email address' />
             <label>Password</label>
-            <input autocomplete="password" name="password" type='password' placeholder='Enter password' />
+            <input autocomplete="password" name="password" type='password'onChange={e => setPassword(e.target.value)} placeholder='Enter password' />
             {/* <Link to='/forgotPassword'> */}
             <span className={loginStyles.forgetPwd}>Forget password?</span>
             {/* </Link> */}
@@ -31,14 +58,16 @@ const Login = () => {
             
             <div className={loginStyles.signupLink}>
             <span>Don't have an account? </span>
-            <Link to='/signup' >
+            <Link to='/' >
                 Sign up
             </Link>
             </div>
         </form>
    </div>
       
-    );
-};
+    )
+}
 
-export default Login;
+Login.propTypes = {
+    setToken: PropTypes.func.isRequired
+  }
