@@ -4,7 +4,7 @@ body{
 } 
 .container{
     display: flex;
-    /* flex-direction: column; */
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
     width: 100%;
@@ -46,4 +46,27 @@ body{
     background-color: #6976d985;
 }
 
-
+ 
+  /*Media Query*/
+  @media screen and (max-width:640px){
+    .context {
+      margin: auto;
+      max-width: 300px;
+    }
+    .context h1{
+        font-size: 35px;
+    }
+    .context p{
+        max-width: 300px;
+        font-size: 20px;
+    }
+    .currency input{
+        margin: 30px auto;
+        max-width: 300px;
+    }
+    .button{
+        width: 360px;
+        padding:20px;
+        margin: auto 10px;
+    }
+  }

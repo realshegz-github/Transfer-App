@@ -37,32 +37,34 @@ export default function Login() {
   return (
    
    <div className={loginStyles.container}>
-      <div className={loginStyles.animation}>
-          <img src={Authentication} alt='authentication' width='600px'/>
-        </div>
+       <div className={loginStyles.subContainer}>
+            <div className={loginStyles.animation}>
+                <img src={Authentication} alt='authentication'/>
+                </div>
 
-        <form onSubmit={handleSubmit}>
-            <h2>Login to stay connected with <span><b>Transfer App</b></span> all around the continent</h2>
-            <label>Email</label>
-            <input autocomplete="email" required  name="name" type='email' onChange={e => setUserName(e.target.value)} placeholder='Enter email address' />
-            <label>Password</label>
-            <input autocomplete="password" name="password" type='password'onChange={e => setPassword(e.target.value)} placeholder='Enter password' />
-            {/* <Link to='/forgotPassword'> */}
-            <span className={loginStyles.forgetPwd}>Forget password?</span>
-            {/* </Link> */}
-            {/* <Link to='/transfer' > */}
-                 <button className={loginStyles.btnLogin} type='submit'>Log in</button>
-                 {/* onClick={()=> loginWithRedirect()}> */}
-            {/* </Link> */}
-            
-            
-            <div className={loginStyles.signupLink}>
-            <span>Don't have an account? </span>
-            <Link to='/' >
-                Sign up
-            </Link>
-            </div>
-        </form>
+                <form onSubmit={handleSubmit}>
+                    <h2>Login to stay connected <br/>with <span><b>Transfer App</b></span></h2>
+                    <label>Email</label>
+                    <input autocomplete="email" required  name="name" type='email' onChange={e => setUserName(e.target.value)} placeholder='Enter email address' />
+                    <label>Password</label>
+                    <input autocomplete="password" name="password" type='password'onChange={e => setPassword(e.target.value)} placeholder='Enter password' />
+                    {/* <Link to='/forgotPassword'> */}
+                    <span className={loginStyles.forgetPwd}>Forget password?</span>
+                    {/* </Link> */}
+                    {/* <Link to='/transfer' > */}
+                        <button className={loginStyles.btnLogin} type='submit'>Log in</button>
+                        {/* onClick={()=> loginWithRedirect()}> */}
+                    {/* </Link> */}
+                    
+                    
+                    <div className={loginStyles.signupLink}>
+                    <span>Don't have an account? </span>
+                    <Link to='/' >
+                        Sign up
+                    </Link>
+                    </div>
+                </form>
+       </div>
    </div>
       
     )

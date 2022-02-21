@@ -29,5 +29,21 @@ body{
 .select option{
     background: rgba(255, 255, 255, 0.39);
     color: rgba(12, 12, 12, 0.623);
-
+}
+@media screen and (max-width:640px){
+    .input{
+        width: 250px;
+        padding:20px;
+        border: none;
+        border-radius: 0;
+        box-shadow: 0 10px 20px rgba(63, 63, 180, 0.274);
+        font-size: large;
+        
+    }
+     .select{
+      padding: 20px;
+      width: 100px;
+      cursor: pointer;
+      margin: 0 10px;
+    }
 }
